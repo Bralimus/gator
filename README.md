@@ -3,6 +3,8 @@
 ## Blog aggregator
 * RSS (Really Simple Syndication) feed aggregator
     Allows users and applications to access updates to websites in a standardized, computer-readable format
+* Fetch the RSS feed of a website and store its content in a structured format in our database
+    So it can be nicely desplayed in CLI
 
 ## Uses
 1. Add RSS feeds from across the internet to be collected
@@ -21,4 +23,4 @@
     User postgres, password: postgres
     User bralimus, password: postgres
 * Connection String
-    postgres://bralimus:@localhost:5432/gator
+    postgres://bralimus:postgres@localhost:5432/gator
