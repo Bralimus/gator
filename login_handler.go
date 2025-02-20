@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"errors"
 	"fmt"
 )
@@ -11,7 +12,12 @@ func handlerLogin(s *state, cmd command) error {
 	}
 
 	userName := cmd.args[0]
-	err := s.cfg.SetUser(userName)
+	_, err := s.db.GetUser(context.Background(), userName)
+	if err != nil {
+		return fmt.Errorf("you can't login to an account that doesn't exist")
+	}
+
+	err = s.cfg.SetUser(userName)
 	if err != nil {
 		return err
 	}
