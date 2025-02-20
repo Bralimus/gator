@@ -17,3 +17,8 @@
 * No user-based authentication for this app
     If someone has the database credentials, they can act as ANY user
     Focus on SQL, CLIs and long-running services ffor this project
+* Postgresql database is "gator"
+    User postgres, password: postgres
+    User bralimus, password: postgres
+* Connection String
+    postgres://bralimus:@localhost:5432/gator
